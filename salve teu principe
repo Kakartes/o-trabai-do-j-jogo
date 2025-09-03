@@ -1,53 +1,44 @@
 programa
 {
-	inclua biblioteca Util --> u
-	inclua biblioteca Texto
- --> t
+	inclua biblioteca Texto --> t
+	inclua biblioteca Util
+ --> u
+	
 
 	
-	
 	funcao inicio()
-	{
+     	{
 		cadeia texto = "Olá jogador! Eu sou o narrador, você esta pronto para se torna a poderosa guerreira Neera?"
-		
 		escrevaMaquina(texto, 25)
 		escreva("\n")
 		cadeia pergunta = "Sim --> s        	Nao --> n"
 		escrevaMaquina(pergunta, 25)
 		escolhaJogador()
 	
-	}
-
-
+	     }
 	funcao escrevaMaquina(cadeia texto, inteiro velocidade){
 		
 		para(inteiro i=0; i < t.numero_caracteres(texto); i++){
 			escreva(t.obter_caracter(texto, i))
 			u.aguarde(velocidade)
 		}
-	}
-
+	     }
 	funcao escolhaJogador(){
 		cadeia respostaJogador
 		escreva("\n")
 		leia(respostaJogador)
 		
-		
-
 		se(respostaJogador == "s"){
-			inicioJogo"
+			cadeia texto = "slk"
+			escrevaMaquina(texto, 25)
+		escreva("\n")
 		}
-
-		se(respostaJogador == "n"){
-			escreva("vsfd")
+		
+         	se(respostaJogador == "n"){
+			cadeia texto = "sla"
+			escrevaMaquina(texto, 25)
+		escreva("\n")
 		}
-		senao{
-			enquanto(respostaJogador != "s" e respostaJogador != "n"){
-				escreva("resposta invalida. tente de novo")
-				leia(respostaJogador)
-				
-		}
-		}
-	}
 	
+          }
 }
